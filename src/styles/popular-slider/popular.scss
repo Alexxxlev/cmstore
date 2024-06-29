@@ -1,0 +1,22 @@
+.popular {
+    overflow: hidden;
+    &_bg-gray {
+        background: #F5F5F7;
+        padding: 120px 0 98px;
+        @media (max-width: $notebook-screen-size - 1px) {
+            padding: 80px 0 48px;
+        }
+        @media (max-width: $tablet-screen-size - 1px) {
+            padding: 60px 0 28px;
+        }
+        @media (max-width: $phone-screen-size - 1px) {
+            padding: 42px 0 0;
+        }
+        .catalog-body__item {
+            background: #fff;
+        }
+    }
+    &__wrapper {
+        max-width: 1660px;
+    }
+}

@@ -1,0 +1,85 @@
+.tooltip {
+    position: absolute;
+    font-size: 14px;
+    left: var(--left);
+    background: #fff;
+    color: $black;
+    font-style: normal;
+    padding: 16px;
+    line-height: normal;
+    border-radius: 8px;
+    box-shadow: 0 0 15px 0 rgba(225,225,225,.2), 0 0 46px 0 rgba(225,225,225,.12), 0 10px 38px 0 #e1e1e1;
+    opacity: 0;
+    transition: opacity .3s, visibility .3s, transform .3s;
+    width: 286px;
+    z-index: 9;
+    @media (max-width: $tablet-screen-size - 1px) {
+        position: fixed;
+        pointer-events: auto;
+        bottom: 0 !important;
+        top: auto !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100%;
+        box-shadow: none;
+        z-index: 9;
+        padding: 25px 20px max(25px, var(--safe-area-inset-bottom, 0px));
+        border-radius: 8px 8px 0 0;
+        transform: translateY(100%);
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: -35px;
+        left: calc(50% - 21px); 
+        border: 21px solid transparent;
+        border-bottom-color: #fff;
+        z-index: 2;
+        transition: opacity .3s ease, visibility .3s ease;
+        @media (max-width: $tablet-screen-size) {
+            display: none;
+        }
+    }
+    &._no-title {
+        @media (max-width: $tablet-screen-size) {
+            padding-top: 53px;
+        }
+    }
+    &__title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 11px;
+        @media (min-width: $tablet-screen-size) {
+            display: none;
+        }
+    }
+    &__close {
+        position: absolute;
+        top: 24px;
+        right: 20px;
+        * {
+            pointer-events: none;
+        }
+        @media (min-width: $tablet-screen-size) {
+            display: none;
+        }
+    }
+    &__text {
+        font-size: 12px;
+        @media (max-width: $tablet-screen-size - 1px) {
+            font-size: 14px;
+        }
+    }
+    &__bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 8;
+        background: rgba(0, 0, 0, 0.7);
+        @media (min-width: $tablet-screen-size) {
+            display: none !important;
+        }
+    }
+}

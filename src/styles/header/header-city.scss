@@ -1,0 +1,105 @@
+.header-city {
+    position: relative;
+    @media (max-width: $tablet-screen-size - 1px) {
+        height: 24px;
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 14px;
+        * {
+            pointer-events: none;
+        }
+        span {
+            @media (max-width: $tablet-screen-size - 1px) {
+                display: none;
+            }
+        }
+    }
+    &._active {
+        .header-city__question {
+            opacity: 1;
+            visibility: visible;
+        }
+        .header-city__question-bg {
+            @media (max-width: $phone-big-screen-size - 1px) { 
+                display: block;
+            }
+        }
+    }
+    &__question {
+        position: absolute;
+        width: 348px;
+        top: calc(100% + 26px);
+        left: 0;
+        padding: 24px;
+        border-radius: 12px;
+        background: #FFF;
+        box-shadow: 0px 8px 10px 0px rgba(175, 175, 175, 0.20), 0px 6px 30px 0px rgba(0, 0, 0, 0.12), 0px 0px 24px 0px rgba(0, 0, 0, 0.14);
+        z-index: 99;
+        opacity: 0;
+        visibility: hidden;
+        @media (max-width: $phone-big-screen-size - 1px) { 
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+            top: auto;
+            z-index: 99;
+            padding-top: 42px;
+            padding-bottom: 21px;
+            border-radius: 12px 12px 18px 18px;
+            box-shadow: none;
+        }
+        @media (max-width: $phone-big-screen-size - 1px) {
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 12px 12px 0 0;
+        }
+    }
+    &__question-bg {
+        @media (max-width: $phone-big-screen-size - 1px) { 
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(25, 25, 27, 0.70);
+            z-index: 98;
+        }
+    }
+    &__question-title {
+        margin-bottom: 24px;
+        color: $black;
+        @media (max-width: $notebook-screen-size - 1px) {
+            font-size: 14px;
+        }
+        @media (max-width: $phone-big-screen-size - 1px) { 
+            font-size: 19px;
+        }
+    }
+    &__question-button {
+        @media (max-width: $notebook-screen-size - 1px) {
+            font-size: 14px;
+        }
+        @media (max-width: $phone-big-screen-size - 1px) {
+            width: calc(50% - 6px); 
+            padding: 0 10px;
+        }
+    }
+    &__question-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: $black;
+        * {
+            pointer-events: none;
+        }
+    }
+    &__question-box {
+        display: flex;
+        justify-content: space-between;
+    }
+}

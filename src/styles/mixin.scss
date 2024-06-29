@@ -1,0 +1,54 @@
+@mixin font {font-family: $fontFamily;}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+// $name - название для font-family
+// $path - путь к шрифту без формата
+// $weight - font-weight
+// $style - font-style
+// $exts - форматы шрифта, которые используются
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+    $src: null;
+
+    $extmods: (
+        eot: "?",
+        svg: "#" + str-replace($name, " ", "_")
+    );
+
+    $formats: (
+        otf: "opentype",
+        ttf: "truetype"
+    );
+
+    @each $ext in $exts {
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+
+    @font-face {
+        font-display: block;
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
+}
+
+@mixin scroll {
+    scrollbar-width: thin;       
+    scrollbar-color: #C3C3C3 transparent; 
+    &::-webkit-scrollbar {
+        width: 4px;               
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;      
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #C3C3C3;    
+        border-radius: 27px;  
+    }
+}

@@ -1,0 +1,29 @@
+$desktop-screen-size: 1920px;
+$notebook-screen-size: 1440px;
+$tablet-screen-size: 1024px;
+$phone-big-screen-size: 767px;
+$phone-screen-size: 375px;
+
+$black: #0E0E0E;
+$blue: #2A65C5;
+
+$bgColor: #fff;
+$baseTextColor: $black;
+$fontFamily: 'Inter';
+$fontSize: 16px;
+$baseLineHeight: 1.2;
+
+:root {
+    --scrollMenu: 0;
+    --headH: 96px;
+    --safe-area-inset-bottom: env(safe-area-inset-bottom);
+    @media (min-width: $phone-big-screen-size) {
+        --headH: 104px;
+    }
+    @media (min-width: $tablet-screen-size) {
+        --headH: 111px;
+    }
+    @media (min-width: $notebook-screen-size) {
+        --headH: 117px;
+    }
+}

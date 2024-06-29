@@ -1,0 +1,113 @@
+.header-item {
+    display: grid;
+    grid-template-columns: 72px 304px 1fr;
+    align-items: center;
+    padding: 0 20px;
+    gap: 16px;
+    color: $black;
+    &__sum {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #7D7D7D;
+        font-size: 14px;
+        line-height: 20px;
+        white-space: nowrap;
+        transition: top .3s ease, transform .3s ease;
+        + .header-item__remove-bt {
+            margin-top: 32px;
+        }
+    }
+    &:hover {
+        color: #7D7D7D;
+        .header-item__remove-bt {
+            color: #999;
+            &:hover {
+                color: $black;
+            }
+        }
+        .header-item__sum {
+            top: 0;
+            transform: translate(-50%, 0%);
+        }
+    }
+    &__container {
+        display: flex;
+        flex-flow: column;
+        width: 472px;
+        padding-top: 20px;
+        max-height: 352px;
+        overflow: auto;
+        gap: 16px;
+        @include scroll;
+    }
+    &__remove {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        text-align: right;
+    }
+    &__name {
+        font-size: 14px;
+        margin-bottom: 7px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    &__ptice {
+        display: flex;
+        align-items: center;
+        color: $black;
+        gap: 6px;
+        font-size: 16px;
+        font-weight: 800;
+        span {
+            font-size: 12px;
+        }
+        p + p {
+            color: #999;
+            font-size: 14px;
+            font-weight: 400;
+            text-decoration: line-through;
+        }
+    }
+    &__remove {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__remove-bt {
+        width: 24px;
+        height: 24px;
+        color: transparent;
+        transition: color .3s ease;
+    }
+    &__bt-box {
+        border-top: 0.5px solid #E1E1E3;
+        padding: 20px;
+        margin-right: -10px;
+    }
+    &__button {
+        font-weight: 400;
+        padding: 0 40px;
+    }
+    &__price-dl {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__price-dt {
+        color: $black;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+    }
+    &__price-dd {
+        color: $black;
+        text-align: right;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+    }
+}

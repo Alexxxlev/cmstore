@@ -1,0 +1,93 @@
+.basket-complect {
+    margin: 20px 0 0 0;
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 32px;
+        @media (max-width: $desktop-screen-size - 1px) {
+            margin-bottom: 20px;
+        }
+    }
+    &__head-title {
+        display: flex;
+        flex-flow: column;
+    }
+    &__head-check {
+        margin-bottom: 8px;
+        .checkbox__text {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 28px;
+            @media (max-width: $desktop-screen-size - 1px) {
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+    }
+    &__benefit {
+        display: inline-block;
+        color: #3C82FF;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16px;
+        border-radius: 46px;
+        border: 1px solid #5AA0F5;
+        background: #FFF;
+        padding: 4px 12px;
+    }
+    &__price {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: right;
+        margin-top: 4px;
+        p {
+            margin-bottom: 8px;
+        }
+    }
+    &__remove {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        color: #999;
+        &:hover {
+            color: $black;
+        }
+        * {
+            pointer-events: none;
+        }
+    }
+    .basket__order {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        gap: 8px;
+        width: calc(100% - 32px);
+        margin-left: 32px;
+        @media (max-width: $phone-big-screen-size - 1px) {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+    .basket__insurance-link {
+        @media (max-width: $phone-big-screen-size - 1px) {
+            margin-left: -106px;
+            margin-top: 18px;
+        }
+    }
+    .basket__price {
+        @media (max-width: $phone-big-screen-size - 1px) {
+            text-align: left;
+        }
+    }
+    .basket__item {
+        &:not(:last-child) {
+            border-bottom: none;
+            padding: 0;
+            margin-bottom: 32px;
+            @media (max-width: $desktop-screen-size - 1px) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

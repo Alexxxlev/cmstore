@@ -1,0 +1,43 @@
+.menu {
+    display: none;
+    position: fixed;
+    top: var(--headH);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--headH));
+    height: calc(var(--vh, 1vh) * 100 - var(--headH) - var(--safe-area-inset-bottom, 0px));
+    max-height: 691px;
+    overflow: auto;
+    z-index: 8;
+    background: #fff;
+    @media (max-width: $tablet-screen-size - 1px) {
+        top: var(--scroll);
+        max-height: none;
+        height: calc(100vh - var(--scroll) - 49px);
+        height: calc(var(--vh, 1vh) * 100 - var(--scroll) - 49px  - var(--safe-area-inset-bottom, 0px));
+    }
+    @media (max-width: $tablet-screen-size - 1px) {
+        overflow: hidden;
+    }
+    &_active {
+        display: block;
+    }
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+        max-height: 100%;
+        @media (min-width: $tablet-screen-size) {
+            height: 100%;
+            max-height: none;
+        }
+        @media (max-width: $tablet-screen-size - 1px) {
+            overflow: auto;
+        }
+        @media (max-width: $phone-big-screen-size - 1px) {
+            padding: 0;
+        }
+    }
+} 
+.menu-open {
+    overflow: hidden;
+}

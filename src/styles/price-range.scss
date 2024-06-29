@@ -1,0 +1,182 @@
+/* Price Range */
+price-range {
+    --thumb-size: 20px;
+    --thumb-color: #0E0E0E;
+    --thumb-shadow-size: 5px;
+    --track-size: 1px;
+    --track-color: #E1E1E3;
+    --track-highlight-color: #999;
+
+    width: 100%;
+    display: block;
+    @media (max-width: $tablet-screen-size - 1px) {
+        margin-bottom: 24px;
+    }
+}
+
+/* Price Range Containers */
+price-range>.range-container {
+    position: relative;
+    width: 100%;
+    height: calc(var(--thumb-size) + 1px);
+}
+
+price-range>.range-container>div {
+    width: 100%;
+    height: var(--track-size);
+    background: var(--track-color);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+/* Price Range Input */
+price-range input[type="range"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+/* Price Range Input Track */
+price-range input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    height: 5px;
+}
+
+price-range input[type="range"]::-moz-range-track {
+    -moz-appearance: none;
+    height: 5px;
+}
+
+price-range input[type="range"]::-ms-track {
+    appearance: none;
+    height: 5px;
+}
+
+/* Price Range Input Thumb */
+price-range input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: -7px;
+    width: var(--thumb-size);
+    height: var(--thumb-size);
+    background: var(--thumb-color);
+    border: none;
+    border-radius: 50%;
+    pointer-events: auto;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 var(--thumb-color);
+    transition: background-color 0.15s ease;
+    &:hover {
+        background: #7D7D7D;
+    }
+}
+
+price-range input[type="range"]::-moz-range-thumb {
+    -moz-appearance: none;
+    width: var(--thumb-size);
+    height: var(--thumb-size);
+    background: var(--thumb-color);
+    border: none;
+    border-radius: 50%;
+    pointer-events: auto;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 var(--thumb-color);
+    transition: background-color 0.15s ease;
+    &:hover {
+        background: #3A3A3C;
+    }
+}
+
+price-range input[type="range"]::-ms-thumb {
+    appearance: none;
+    width: var(--thumb-size);
+    height: var(--thumb-size);
+    background: var(--thumb-color);
+    border: none;
+    border-radius: 50%;
+    pointer-events: auto;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 var(--thumb-color);
+    transition: background-color 0.15s ease;
+    &:hover {
+        background: #3A3A3C;
+    }
+}
+.price-range-input {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    &:before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        background: #E1E1E3;
+    }
+    .bx-filter-parameters-box-container-block {
+        display: flex;
+        position: relative;
+        align-items: center;
+        background: #fff;
+        padding: 0 0 0 20px;
+        border: 1px solid rgb(225, 225, 227);
+        border-radius: 8px;
+        width: calc(50% - 5px);
+        font-size: 12px;
+        color: #7D7D7D;
+        z-index: 2;
+        .currency {
+            display: none;
+        }
+        @media (max-width: $tablet-screen-size - 1px) {
+            text-align: center;
+            height: 38px;
+            justify-content: center;
+            .bx-filter-input-container {
+                width: auto;
+            }
+            .currency {
+                display: inline-block;
+                font-size: 16px;
+                color: $black;
+            }
+        }
+        i {
+            font-style: normal;
+            margin-top: 3px;
+        }
+        input {
+            border: none;
+            outline: none;
+            padding: 0 5px;
+            height: 36px;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 16px;
+            &.dynamicWidthInput {
+                @media (max-width: $tablet-screen-size - 1px) {
+                    width: auto;
+                    text-align: center;
+                }
+            }
+        }
+        .bx-filter-input-container {
+            width: 100%;
+        }
+    }
+}

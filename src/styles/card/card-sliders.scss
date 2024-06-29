@@ -1,0 +1,292 @@
+.card-sliders {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 605px;
+    justify-content: space-between;
+    z-index: 2;
+    @media (max-width: $desktop-screen-size - 1px) {
+        width: 542px;
+    }
+    @media (max-width: $notebook-screen-size - 1px) {
+        flex-flow: column;
+        position: sticky;
+        top: 120px;
+        width: calc(100% - 448px);
+    }
+    @media (max-width: $tablet-screen-size - 1px) {
+        width: calc(100% - 328px);
+        top: 0;
+    }
+    @media (max-width: $phone-big-screen-size - 1px) {
+        width: 100%;
+        position: relative;
+        margin-bottom: 30px;
+    }
+    .catalog-body__label-box {
+        @media (max-width: $phone-big-screen-size - 1px) {
+            position: relative;
+            margin-bottom: 12px;
+            margin-top: -24px;
+            width: calc(100% - 122px);
+        }
+    }
+    &__main-wrapper {
+        opacity: 0;
+        &.slick-initialized {
+            opacity: 1;
+        }
+    }
+    &__main-box {
+        position: relative;
+        width: calc(100% - 102px);
+        max-width: 457px;
+        margin-top: 25px;
+        @media (max-width: $desktop-screen-size - 1px) {
+            margin-top: 0;
+        }
+        @media (max-width: $notebook-screen-size - 1px) {
+            order: 1;
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    &__main {
+        margin: 0;
+        @media (max-width: $notebook-screen-size - 1px) {   
+            max-width: 380px;
+            margin: 0 auto;
+        }
+        @media (max-width: $tablet-screen-size - 1px) {   
+            padding-bottom: 18px;
+        }
+        &:hover {
+            @media (min-width: $tablet-screen-size) {   
+                .slick-arrow {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        } 
+        .card-sliders__main-pagination {
+            @media (max-width: $tablet-screen-size - 1px) {  
+                display: flex;
+                justify-content: center;
+            }
+        }
+        .slick-arrow {
+            display: flex;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: 1px solid #e1e1e3;
+            color: #0e0e0e;
+            background: #fff;
+            width: 40px;
+            height: 40px;
+            top: 50%;
+            margin-top: -20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: border .2s, opacity .2s ease, visibility .2s ease;
+            z-index: 2;
+            @media (max-width: $tablet-screen-size - 1px) {  
+                display: none;
+            }
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+            &.slick-next {
+                left: auto;
+                right: 0;
+                transform: rotate(0deg); 
+            }
+            &.slick-prev {
+                left: 0;
+                transform: rotate(180deg); 
+            }
+            &:hover { 
+                border: 1.5px solid #999; 
+            }
+            &_prev {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .slick-dots {
+        display: none !important;
+        align-items: center;
+        justify-content: center;
+        bottom: 0 !important;
+        width: 204px;
+        font-size: 0;
+        list-style: none;
+        margin: 0 auto;
+        gap: 8px;
+        @media (max-width: $tablet-screen-size - 1px) {   
+            display: flex !important;
+        }
+        li {
+            width: 40px;
+            button {
+                width: 100%;
+                height: 2px;
+                padding: 10px 0;
+                border: none;
+                opacity: 1;
+                background: none;
+                &:before {
+                    content: "";
+                    width: 100%;
+                    height: 2px;
+                    display: block;
+                    border-radius: 2px;
+                    background: #E1E1E3;
+                    opacity: 1;
+                    border: none;
+                }
+            }
+            &.slick-active {
+                button {
+                    &:before {
+                        background: $black;
+                    }
+                }
+            }
+        }
+    }   
+    &__thumb-box {
+        position: relative;
+        width: 90px;
+        height: 408px;
+        margin-top: 40px;
+        &_hide {
+            display: none;
+            ~ .card-sliders__main-box {
+                margin-left: 86px;
+                @media (max-width: $desktop-screen-size - 1px) {
+                    margin-left: 60px;
+                }
+                @media (max-width: $notebook-screen-size - 1px) {
+                    margin-left: 0;
+                }
+            }
+        }
+        @media (max-width: $desktop-screen-size - 1px) {
+            margin-top: 16px;
+        }
+        @media (max-width: $notebook-screen-size - 1px) {
+            order: 2;
+            width: 100%;
+            height: 90px;
+            margin-top: 20px;
+        }
+        @media (max-width: $tablet-screen-size - 1px) {
+            display: none;
+        }
+    }
+    &__thumb {
+        height: 100%;
+        margin: 0;
+        @media (min-width: $notebook-screen-size) {
+            display: flex;
+            align-items: center;
+        }
+        .slick-arrow {
+            border: none !important;
+            left: 50%;
+            transition: transform .3s ease;
+            @media (max-width: $notebook-screen-size - 1px) {
+                display: none !important;
+            }
+            &.slick-next {
+                bottom: -40px;
+                transform: translateX(-50%) rotate(90deg);
+                &:hover {
+                    transform: translateX(-50%) translateY(5px) rotate(90deg);
+                }
+            }
+            &.slick-prev {
+                top: -40px;
+                transform: translateX(-50%) rotate(-90deg);
+                &:hover {
+                    transform: translateX(-50%) translateY(-5px) rotate(-90deg);
+                }
+            }
+            svg {
+                width: 24px;
+                height: 24px;
+                color: $black;
+            }
+        }
+        &_small {
+            .slick-list {
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+            }
+        }
+    }
+    .slick-current { 
+        .card-sliders__thumb-slide-content {
+            border-color: $black;
+        }
+    }
+    &__thumb-slide {
+        border-radius: 8px;
+        width: 90px;
+        
+    }
+    &__thumb-slide-content {
+        border: 2px solid transparent;
+        transition: border-color .3s ease;
+        width: 90px;
+        border-radius: 8px;
+        &:hover {
+            border-color: #7D7D7D;
+        }
+    }
+}
+
+.slick-arrow {
+    display: flex; 
+    position: absolute;
+    justify-content: center;
+    align-items: center; 
+    border-radius: 50%;
+    border: 1px solid #e1e1e3;
+    color: #0e0e0e;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    transition: border .2s, opacity .2s, visibility .2s;
+    left: 50%;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    margin: 0;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 43px;
+    @media (max-width: $notebook-screen-size - 1px) {
+        display: none;
+    }
+    &::after,
+    &:before {
+        display: none;
+    }
+    * {
+        pointer-events: none;
+    }
+    &.slick-next {
+        transform: translateX(-50%) rotate(180deg);
+    }
+    svg {
+        width: 24px;
+        height: 24px;
+        color: $black;
+    }
+}

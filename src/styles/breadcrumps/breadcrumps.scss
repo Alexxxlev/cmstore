@@ -1,0 +1,82 @@
+.breadcrumps {
+    color: #7D7D7D;
+    margin-top: 12px;
+    font-size: 12px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scrollbar-width: thin;       
+    scrollbar-color: transparent transparent; 
+    &::-webkit-scrollbar {
+        width: 0px;  
+        height: 0;             
+        opacity: 0;
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;   
+        width: 0px;  
+        height: 0;   
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;  
+        width: 0px;  
+        height: 0;
+    }
+    @media (min-width: $phone-big-screen-size) {
+        font-size: 14px;
+    }
+    @media (min-width: $tablet-screen-size) {
+        margin-top: 16px;
+    }
+    @media (min-width: $notebook-screen-size) {
+        margin-top: 20px;
+    }
+    &__wrapper {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 4px;
+        @media (max-width: $tablet-screen-size - 1px) {
+            gap: 4px;
+        }
+    }
+    span {
+        display: inline-flex;
+        white-space: nowrap;
+    }
+    a {
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        gap: 10px;
+        white-space: nowrap;
+        @media (max-width: $tablet-screen-size - 1px) {
+            gap: 4px;
+            font-size: 12px;
+        }
+        &:before {
+            content: "";
+            width: calc(100% - 24px);
+            height: 1px;
+            background: transparent;
+            position: absolute;
+            top: calc(100% + 3px);
+            left: -1px;
+            transition: background-color .3s ease;
+        }
+        &:hover {
+            color: $black;
+            &:before {
+                background-color: $black;
+            }
+        }
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url(../img/icon/arrow-right-bl.svg) no-repeat 50% 50%;
+            background-size: contain;
+        }
+    }
+}

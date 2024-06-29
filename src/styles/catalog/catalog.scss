@@ -1,0 +1,22 @@
+.catalog {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 24px;
+    @media (min-width: $phone-big-screen-size) {
+        margin-top: 32px;   
+    }
+    &__box {
+        width: 100%;
+    }
+    .catalog-filter {
+        + .catalog__box {
+            @media (min-width: $tablet-screen-size) {
+                width: calc(100% - 245px);
+            }
+            @media (min-width: $notebook-screen-size) {
+                width: calc(100% - 264px);
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.receipts {
+    display: flex;
+    gap: 8px;
+    overflow: auto;
+
+    scrollbar-width: thin;       
+    scrollbar-color: transparent transparent; 
+    &::-webkit-scrollbar {
+        width: 0;
+        display: none;
+    }
+    &::-webkit-scrollbar {
+        width: 0;
+        display: none;
+    }
+    @media (min-width: $tablet-screen-size) {
+        flex-wrap: wrap;
+    }
+    @media (min-width: $phone-big-screen-size) {
+        gap: 16px;
+    }
+    &__item {
+        border-radius: 8px;
+        background: #F5F5F7;
+        font-size: 14px;
+        padding: 8px 17px;
+        &:hover {
+            background: #E4E4E6;
+            color: $black;
+        }
+    }
+}

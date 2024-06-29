@@ -1,0 +1,90 @@
+.insurance-foot {
+    @media (max-width: $tablet-screen-size - 1px) {
+        padding: 24px 20px;
+        border-top: .5px solid #E1E1E3;
+    }
+    @media (max-width: $tablet-screen-size - 1px) {
+        padding: 20px 12px;
+    }
+    &__title {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        margin-bottom: 12px;
+        @media (max-width: $tablet-screen-size - 1px) {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: $phone-big-screen-size - 1px) {
+            margin-bottom: 16px;
+        }
+    }
+    &__list {
+        display: flex;
+        border-radius: 8px;
+        background: #F5F5F7;
+        list-style: none;
+        margin-bottom: 20px;
+        &_col1 {
+            .insurance-foot__li {
+                width: 100%;
+            }
+        }
+    }
+    &__li {
+        position: relative;
+        width: 33.33%;
+        &:not(:last-child) {
+            &:before {
+                content: "";
+                width: 1px;
+                background: #E1E1E3;
+                height: 24px;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    &__select {
+        position: relative;
+        display: flex;
+        padding: 8px 20px;
+        text-align: center;
+        justify-content: center;
+        border: 2px solid transparent;
+        color: #7D7D7D;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 6px;
+        &:hover {
+            color: $black;
+        }
+        &._current {
+            color: $black;
+            border-color: $black;
+            background: #fff;
+        }
+    }
+    &__price-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__price {
+        color: #0E0E0E;
+        font-weight: 800;
+        font-size: 16px;
+        span {
+            font-size: 24px;
+        }
+    }
+    &__button {
+        * {
+            pointer-events: none;
+        }
+    }
+}

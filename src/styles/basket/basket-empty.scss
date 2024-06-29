@@ -1,0 +1,56 @@
+.basket-empty {
+    margin: 120px 0;
+    text-align: center;
+    @media (max-width: $notebook-screen-size - 1px) {
+        margin: 80px 0;
+    }
+    @media (max-width: $phone-big-screen-size - 1px) {
+        margin: 24px 0;
+        text-align: left;
+    }
+    &__wrapper {
+        max-width: 869px;
+        padding: 0 46px;
+        margin: 0 auto;
+        @media (max-width: $notebook-screen-size - 1px) {
+            padding: 0 20px;
+        }
+        @media (max-width: $phone-big-screen-size - 1px) {
+            padding: 0 12px;
+        }
+    }
+    &__title {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 44px;
+        margin-bottom: 16px;
+        @media (max-width: $notebook-screen-size - 1px) {
+            font-size: 32px;
+            line-height: 40px; 
+        }
+        @media (max-width: $phone-big-screen-size - 1px) {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 28px;
+            margin-bottom: 12px;
+        }
+    }
+    &__text {
+        line-height: 20px;
+        margin-bottom: 32px;
+    }
+    &__bt-box {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        @media (max-width: $phone-big-screen-size - 1px) {
+            flex-flow: column;
+        }
+    }
+    &__button {
+        padding: 0 40px;
+        @media (max-width: $phone-big-screen-size - 1px) {
+            width: 100%;
+        }
+    }
+}

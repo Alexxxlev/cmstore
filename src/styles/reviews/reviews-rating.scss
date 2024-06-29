@@ -1,0 +1,42 @@
+.reviews-rating {
+    &__select {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 32px;
+    }
+    &__select-title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+        @media (max-width: $tablet-screen-size - 1px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        span {
+            color: #2A65C5;
+        }
+    }
+    &__select-stars {
+        display: flex;
+        margin-left: -2px;
+        span {
+            display: inline-block;
+            color: transparent; 
+            padding: 0 2px;  
+            * { 
+                pointer-events: none; 
+            } 
+            &:not(._clicked) ~ &._clicked, 
+            &._active {
+                color: $black; 
+            }
+            &._clicked ~ ._active { 
+                color: transparent;
+            }
+        }
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

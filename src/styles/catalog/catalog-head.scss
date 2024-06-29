@@ -1,0 +1,18 @@
+.catalog-head {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+    padding: 0;
+    @media (min-width: $tablet-screen-size) {
+        padding-left: 10px;
+    }
+    @media (min-width: $notebook-screen-size) {
+        padding-left: 12px;
+    }
+    @media (min-width: $desktop-screen-size) {
+        padding-left: 20px;
+    }
+}

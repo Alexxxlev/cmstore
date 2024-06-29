@@ -1,0 +1,390 @@
+.reviews {
+    margin-bottom: 120px;
+    @media (max-width: $desktop-screen-size - 1px) {
+        margin-bottom: 80px;
+    }
+    @media (max-width: $phone-big-screen-size - 1px) {
+        margin-bottom: 43px;
+    }
+    &__container {
+        display: grid;
+        grid-template-columns: 1034px 440px;
+        align-items: flex-start;
+        justify-content: space-between;
+        @media (max-width: $desktop-screen-size - 1px) {
+            grid-template-columns: 886px 428px;
+        }
+        @media (max-width: $notebook-screen-size - 1px) {
+            grid-template-columns: 1fr 428px;
+            gap: 20px;
+        }
+        @media (max-width: $tablet-screen-size - 1px) {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+        @media (max-width: $phone-big-screen-size - 1px) {
+            gap: 20px;
+        }
+    }
+    &__items {
+        @media (max-width: $tablet-screen-size - 1px) {
+            order: 2;
+        }
+    }
+    &__sort {
+        display: flex;
+        gap: 8px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #E1E1E3;
+        @media (max-width: $notebook-screen-size - 1px) {
+            padding-bottom: 20px;
+        }
+        @media (max-width: $tablet-screen-size - 1px) {
+            padding-bottom: 16px;
+        }
+    }
+    &__sort-link {
+        color: $black;
+        font-size: 14px;
+        padding: 7px 12px 8px;
+        border-radius: 6px;
+        background: #EEEEF0;
+        border: 1px solid #EEEEF0;
+        &:hover {
+            background: #e1e1e3;
+            color: $black;
+        }
+        &_active {  
+            border-color: $black;
+            background: #FFF;
+            pointer-events: none;
+        }
+    }
+    &__items {
+        &:not(._show) {
+            .reviews__item {
+                &:nth-child(1n+4) {
+                    display: none;
+                }
+            }
+        }
+    }
+    &__item {
+        padding: 24px 0;
+        border-bottom: 1px solid #E1E1E3;
+        @media (max-width: $notebook-screen-size - 1px) {
+            padding: 20px 0;
+        }
+        @media (max-width: $tablet-screen-size - 1px) {
+            padding: 16px 0;
+        }
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 20px;
+        @media (max-width: $tablet-screen-size - 1px) {
+            margin-bottom: 12px;
+        }
+    }
+    &__name {
+        color: #0E0E0E;
+        font-size: 20px;
+        font-weight: 800;
+        @media (max-width: $tablet-screen-size - 1px) {
+            font-size: 14px;
+        }
+    }
+    &__info-box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    &__date {
+        color: #7D7D7D;
+        font-size: 14px;
+        @media (max-width: $tablet-screen-size - 1px) {
+            font-size: 12px;
+        }
+    }
+    &__stars {
+        display: flex;
+        gap: 6px;
+    }
+    &__text {
+        display: flex;
+        flex-flow: column;
+        gap: 16px;
+        margin-bottom: 20px;
+        @media (max-width: $tablet-screen-size - 1px) {
+            font-size: 14px;
+            gap: 12px;
+        }
+        @media (max-width: $phone-big-screen-size - 1px) {
+            gap: 8px;
+        }
+        b {
+            font-weight: 700;
+        }
+    }
+    &__grade {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        i {
+            width: 1px;
+            height: 16px;
+            background: #E1E1E3;
+        }
+    }
+    &__grade-link {
+        display: flex;
+        align-items: center;
+        color: #7D7D7D;
+        font-size: 12px;
+        line-height: 1.5;
+        letter-spacing: -0.078px;
+        gap: 4px;
+        * {
+            pointer-events: none;
+        }
+        &:hover {
+            color: $black;
+        }
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+        &_minus {
+            .reviews__grade-link-icon {
+                transform: rotate(180deg);
+            }
+        }
+        &_active {
+            color: $black;
+            .reviews__grade-link-icon {
+                position: relative;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 24px;
+                    height: 24px;
+                    background: url(../img/icon/grade-fill.svg) no-repeat 50% 50%;
+                }
+            }
+        }
+    }
+    &__vis {
+        display: inline-flex;
+        margin-top: 24px;
+        color: #2a65c5;
+        &:hover {
+            color: #0c47a7;
+        }
+        @media (max-width: $notebook-screen-size - 1px) {
+            margin-top: 20px;
+        }
+    }
+    &__result {
+        position: sticky;
+        top: 210px;
+        padding: 24px;
+        border-radius: 10px;
+        border: 1px solid #E1E1E3;
+        background: #FFF;
+        @media (max-width: $notebook-screen-size - 1px) {
+            padding: 20px;
+        }
+        @media (max-width: $tablet-screen-size - 1px) {
+            position: relative;
+            top: 0;
+            order: 1;
+            display: flex;
+            padding: 16px;
+            justify-content: space-between;
+        }
+        @media (max-width: $phone-big-screen-size - 1px) {
+            display: block;
+            padding: 16px 16px 84px; 
+        }
+    }
+    &__result-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+        @media (max-width: $tablet-screen-size - 1px) {
+            order: 2;
+            width: 249px;
+            flex-wrap: wrap;
+            margin-bottom: 0;
+        }
+        @media (max-width: $phone-big-screen-size - 1px) {
+            width: 100%;
+            margin-bottom: 8px;
+        }
+    }
+    &__result-head-box {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        .reviews__stars {
+            gap: 6px;
+            margin-bottom: 8px;
+            @media (max-width: $tablet-screen-size - 1px) {
+                margin-bottom: 0;
+            }
+        }
+        @media (max-width: $tablet-screen-size - 1px) {
+            width: 100%;
+        }
+    }
+    &__result-box-grade {
+        @media (max-width: $tablet-screen-size - 1px) {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        @media (max-width: $phone-big-screen-size - 1px) {
+            width: calc(100% - 44px);
+            justify-content: space-between;
+        }
+    }
+    &__send-button {
+        @media (max-width: $tablet-screen-size - 1px) {
+            font-size: 14px;
+            width: 100%;
+            margin-top: 24px;
+            height: 40px;
+        }
+        @media (max-width: $phone-big-screen-size - 1px) {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            right: 16px;
+            width: auto;
+        }
+    }
+    &__result-grade {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 32px;
+        letter-spacing: 0.374px;
+        @media (max-width: $phone-big-screen-size - 1px) {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+    &__result-sum {
+        color: #7D7D7D;
+        @media (max-width: $tablet-screen-size - 1px) {
+            font-size: 14px;
+        }
+    }
+    &__result-sort {
+        display: flex;
+        flex-flow: column;
+        gap: 12px;
+        @media (max-width: $tablet-screen-size - 1px) {
+            order: 1;
+            width: 388px;
+        }
+        @media (max-width: $phone-big-screen-size - 1px) {
+            width: 100%;
+        }
+        i {
+            position: relative;
+            border-radius: 30px;
+            height: 4px;
+            width: calc(100% - 88px);
+            background: #D7D7D7;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: var(--widthLine, 0);
+                height: 100%;
+                transition: width .3s ease;
+                background: $black;
+                border-radius: 30px;
+            }
+        }  
+        span {
+            display: inline-block;
+            width: 44px;
+        } 
+    }
+    &__result-sort-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__result-sort-minus {
+        color: #7D7D7D;
+    }
+    &__result-sort-plus {
+        color: $black;
+        text-align: right;
+    }
+    &__not-rating {
+        max-width: 438px;
+        margin-bottom: -5px;
+        padding-top: 6px;
+        @media (max-width: $tablet-screen-size - 1px) {
+            padding: 0px 0 12px;
+            max-width: 100%;
+            margin: -8px 0 0;
+        }
+        @media (max-width: $phone-big-screen-size - 1px) {
+            margin: 0 0 -1px;
+            padding: 0;
+        }
+        .reviews__send-button {
+            margin-top: 0;
+            @media (max-width: $phone-big-screen-size - 1px) {
+                position: static;
+                width: 100%;
+            }
+        }
+    }
+    &__not-rating-box-grade {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 20px;
+        @media (max-width: $tablet-screen-size - 1px) {
+            margin-bottom: 12px;
+            gap: 12px;
+        }
+    }
+    &__not-rating-box-grade-text {
+        color: #999;
+        font-size: 28px;
+        line-height: 32px;
+        font-weight: 600;
+        @media (max-width: $tablet-screen-size - 1px) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+    &__not-rating-box-grade-stars {
+        display: flex;
+        gap: 6px;
+        line-height: 0;
+    }
+    &__not-rating-text {
+        line-height: 20px;
+        margin-bottom: 24px;
+        @media (max-width: $tablet-screen-size - 1px) {
+            font-size: 14px;
+            margin-bottom: 20px;
+            max-width: 265px;
+        }
+        @media (max-width: $phone-big-screen-size - 1px) {
+        }
+    }
+}

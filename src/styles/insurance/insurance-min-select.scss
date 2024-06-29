@@ -1,0 +1,68 @@
+.insurance-min-select {
+    display: flex;
+    gap: 8px;
+    overflow: auto;
+    padding: 20px 12px;
+    border-top: .5px solid #E1E1E3;
+    scrollbar-width: thin;       
+    scrollbar-color: transparent transparent; 
+    &::-webkit-scrollbar {
+        width: 0px;  
+        height: 0;             
+        opacity: 0;
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;   
+        width: 0px;  
+        height: 0;   
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;  
+        width: 0px;  
+        height: 0;
+    }
+    @media (min-width: $phone-big-screen-size) {
+        margin-bottom: 24px;
+        padding: 0;
+        border: none;
+    }
+    &__item {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        width: 216px;
+        min-width: 216px;
+        padding: 10px;
+        border-radius: 8px;
+        background: #F5F5F7;
+        border: 2px solid #F5F5F7;
+        gap: 20px;
+        transform: border-color .2s ease;
+        @media (min-width: $phone-big-screen-size) {
+            width: 50%;
+        }
+        &._current {
+            border-color: $black;
+            background: #FFF;
+            .insurance-min-select__price {
+                padding-left: 28px;
+                background: url(../img/icon/check-price.svg) no-repeat 0 50%;
+            }
+        }
+        * {
+            pointer-events: none;
+        }
+    }
+    &__title {
+        font-weight: 600;
+        line-height: 20px; 
+        margin-bottom: 4px;
+    }
+    &__desc {
+        color: #7D7D7D;
+    }
+    &__price {
+        font-weight: 600;
+        transition: padding .3s ease;
+    }
+}

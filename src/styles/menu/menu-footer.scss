@@ -1,0 +1,48 @@
+.menu-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    border-top: 1px solid #E1E1E3;
+    z-index: 6;
+    background: #fff;
+    padding-bottom: var(--safe-area-inset-bottom, 0px);
+    transition: padding-bottom 0.3s ease;
+    @media (min-width: $tablet-screen-size) {
+        display: none;
+    }
+    &__wrapper {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: $tablet-screen-size - 1px) { 
+            padding: 0;
+        }
+    }
+    &__control {
+        display: flex;
+        position: relative;
+        align-items: center;
+        width: 100%;
+        max-width: 75px;
+        flex-flow: column;
+        color: #999;
+        padding: 5px;
+        font-size: 10px;
+        .header__controll-sum {
+            top: 4px;
+            right: 21px;
+        }
+        span {
+            margin-top: -2px;
+        }
+        &_active,
+        &:hover {
+            color: #999;
+        }
+        &_active-page {
+            color: $black;
+        } 
+    }
+}

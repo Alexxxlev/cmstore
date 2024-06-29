@@ -1,0 +1,398 @@
+<div class="bx-sidebar-block">
+    <div class="bx-filter bx-blue">
+        <div class="bx-filter-section container-fluid">
+            <div class="smartfilter__title">
+                <p>Фильтры</p>
+                <a href="#" class="smartfilter__close">
+                    <svg width="24" height="24">
+                        <use xlink:href="img/sprite.svg#icon-close"></use>
+                    </svg>
+                </a>
+            </div>
+            <form name="arrFilter_form" action="/catalog2/smartfony/" method="get" class="smartfilter">
+                <div class="row">
+                    <div class="col-lg-12 bx-filter-parameters-box bx-active">
+                        <span class="bx-filter-container-modef"></span>
+                        <div class="bx-filter-parameters-box-title">
+                            <span class="bx-filter-parameters-box-hint">Доступность товара 
+                            </span>
+                            <!--иконку так сделать-->
+                            <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#icon-arrow-top-bl"></use>
+                            </svg>
+                        </div>
+
+                        <div class="bx-filter-block" data-role="bx_filter_block">
+                            <div class="row bx-filter-parameters-box-container">
+                                <div class="col-xs-12">
+                                    <!-- в пункте только в наличии надо добавить класс checkbox-switcher для блока checkbox  -->
+                                    <div class="checkbox checkbox-switcher">
+                                        <label data-role="label_arrFilter_26299_468609398" class="bx-filter-param-label bx-filter-param-label-check" for="arrFilter_26299_468609398">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26299_468609398" id="arrFilter_26299_468609398">
+                                                <span class="bx-filter-param-text" title="Есть">
+                                                    Только в наличии
+
+                                                    <span data-role="count_arrFilter_26007_243018873"> 427</span>
+                                                    <svg width="24" height="24" class="checkbox-switcher__bg">
+                                                        <use xlink:href="img/sprite.svg#icon-switch"></use>
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="clear: both"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 bx-filter-parameters-box bx-active">
+                        <!-- полосу с прокруткой сделал не так, как в битриксе  -->
+                        <span class="bx-filter-container-modef"></span>
+                        <div class="bx-filter-parameters-box-title">
+                            <span>Цена </span>
+                        <!--иконку так сделать-->
+                        <svg width="24" height="24">
+                            <use xlink:href="img/sprite.svg#icon-arrow-top-bl"></use>
+                        </svg>
+                    </div>
+                        <div class="bx-filter-block" data-role="bx_filter_block">
+                            <div class="row bx-filter-parameters-box-container">
+                                <!--ползунки так делать-->
+                                <!--data-title и id обязательны у price-range -->
+                                <price-range data-title="Цена" id="range1">
+                                    <div class="price-range-input">
+                                        <div class="col-xs-6 bx-filter-parameters-box-container-block bx-left">
+                                            <i class="bx-ft-sub">От</i>
+                                            <div class="bx-filter-input-container">
+                                                <input class="min-price dynamicWidthInput" type="text" name="arrFilter_P2_MIN" id="arrFilter_P2_MIN" value="0" size="1">
+                                                    <span class="currency">₽</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 bx-filter-parameters-box-container-block bx-right">
+                                            <i class="bx-ft-sub">До</i>
+                                            <div class="bx-filter-input-container">
+                                                <input class="max-price dynamicWidthInput" type="text" name="arrFilter_P2_MAX" id="arrFilter_P2_MAX" value="100" size="1">
+                                                <span class="currency">₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="range-container">
+                                        <div>
+                                            <input name="price-from" type="range" min="0" max="100" step="1" value="0" aria-label="From">
+                                            <input name="price-to" type="range" min="0" max="100" step="1" value="100" aria-label="To">
+                                        </div>
+                                    </div>
+                                </price-range>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-12 bx-filter-parameters-box bx-active">
+                        <span class="bx-filter-container-modef"></span>
+                        <div class="bx-filter-parameters-box-title">
+                            <span class="bx-filter-parameters-box-hint">Производитель 
+                            </span>
+                            <!--иконку так сделать-->
+                            <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#icon-arrow-top-bl"></use>
+                            </svg>
+                        </div>
+
+                        <div class="bx-filter-block" data-role="bx_filter_block">
+                            <input type="text" class="filter-search input-text input-text_ss" placeholder="Найти">
+                            <div class="row bx-filter-parameters-box-container">
+                                <div class="col-xs-12">
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26007_243018873" class="bx-filter-param-label" for="arrFilter_26007_243018873">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26007_243018873" id="arrFilter_26007_243018873">
+                                                <span class="bx-filter-param-text" title="Apple"><span class="text">Apple</span>&nbsp;<span data-role="count_arrFilter_26007_243018873">427</span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26007_660636815" class="bx-filter-param-label" for="arrFilter_26007_660636815">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26007_660636815" id="arrFilter_26007_660636815">
+                                                <span class="bx-filter-param-text" title="Asus"><span class="text">Asus</span>&nbsp;<span data-role="count_arrFilter_26007_660636815">7</span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26007_1348973593" class="bx-filter-param-label" for="arrFilter_26007_1348973593">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26007_1348973593" id="arrFilter_26007_1348973593">
+                                                <span class="bx-filter-param-text" title="Google"><span class="text">Google</span>&nbsp;<span data-role="count_arrFilter_26007_1348973593">28</span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26007_599955866" class="bx-filter-param-label" for="arrFilter_26007_599955866">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26007_599955866" id="arrFilter_26007_599955866">
+                                                <span class="bx-filter-param-text" title="Honor"><span class="text">Honor</span>&nbsp;<span data-role="count_arrFilter_26007_599955866">2</span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26007_3637470050" class="bx-filter-param-label" for="arrFilter_26007_3637470050">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26007_3637470050" id="arrFilter_26007_3637470050">
+                                                <span class="bx-filter-param-text" title="Nothing"><span class="text">Nothing</span>&nbsp;<span data-role="count_arrFilter_26007_3637470050">1</span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26007_3921936766" class="bx-filter-param-label" for="arrFilter_26007_3921936766">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26007_3921936766" id="arrFilter_26007_3921936766">
+                                                <span class="bx-filter-param-text" title="OnePlus"><span class="text">OnePlus</span>&nbsp;<span data-role="count_arrFilter_26007_3921936766">10</span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26007_2809324660" class="bx-filter-param-label" for="arrFilter_26007_2809324660">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26007_2809324660" id="arrFilter_26007_2809324660">
+                                                <span class="bx-filter-param-text" title="Realme"><span class="text">Realme</span>&nbsp;<span data-role="count_arrFilter_26007_2809324660">27</span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26007_1134345418" class="bx-filter-param-label" for="arrFilter_26007_1134345418">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26007_1134345418" id="arrFilter_26007_1134345418">
+                                                <span class="bx-filter-param-text" title="Samsung"><span class="text">Samsung</span>&nbsp;<span data-role="count_arrFilter_26007_1134345418">195</span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26007_2541059523" class="bx-filter-param-label" for="arrFilter_26007_2541059523">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26007_2541059523" id="arrFilter_26007_2541059523">
+                                                <span class="bx-filter-param-text" title="Xiaomi"><span class="text">Xiaomi</span>&nbsp;<span data-role="count_arrFilter_26007_2541059523">171</span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="clear: both"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 bx-filter-parameters-box">
+                        <span class="bx-filter-container-modef"></span>
+                        <div class="bx-filter-parameters-box-title">
+                            <span class="bx-filter-parameters-box-hint">Объем встроенной памяти 
+                            </span>
+                            <!--иконку так сделать-->
+                            <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#icon-arrow-top-bl"></use>
+                            </svg>
+                        </div>
+
+                        <div class="bx-filter-block" data-role="bx_filter_block">
+                            <div class="row bx-filter-parameters-box-container">
+                                <div class="col-xs-12">
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26028_4016323199" class="bx-filter-param-label" for="arrFilter_26028_4016323199">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26028_4016323199" id="arrFilter_26028_4016323199">
+                                                <span class="bx-filter-param-text" title="32 ГБ"><span class="text">32 ГБ</span>&nbsp;<span data-role="count_arrFilter_26028_4016323199">5</span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26028_2556627689" class="bx-filter-param-label" for="arrFilter_26028_2556627689">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26028_2556627689" id="arrFilter_26028_2556627689">
+                                                <span class="bx-filter-param-text" title="64 ГБ"><span class="text">64 ГБ</span>&nbsp;<span data-role="count_arrFilter_26028_2556627689">37</span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26028_101162826" class="bx-filter-param-label" for="arrFilter_26028_101162826">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26028_101162826" id="arrFilter_26028_101162826">
+                                                <span class="bx-filter-param-text" title="128 ГБ"><span class="text">128 ГБ</span>&nbsp;<span data-role="count_arrFilter_26028_101162826">303</span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26028_263312225" class="bx-filter-param-label" for="arrFilter_26028_263312225">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26028_263312225" id="arrFilter_26028_263312225">
+                                                <span class="bx-filter-param-text" title="1 ТБ"><span class="text">1 ТБ</span>&nbsp;<span data-role="count_arrFilter_26028_263312225">61</span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26028_2025251831" class="bx-filter-param-label" for="arrFilter_26028_2025251831">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26028_2025251831" id="arrFilter_26028_2025251831">
+                                                <span class="bx-filter-param-text" title="512 ГБ"><span class="text">512 ГБ</span>&nbsp;<span data-role="count_arrFilter_26028_2025251831">160</span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26028_4059395850" class="bx-filter-param-label" for="arrFilter_26028_4059395850">
+                                            <span class="bx-filter-input-checkbox">
+                                                <!-- Если товаров нет, а по какой то причине мы отоброжаем его парамтре со значением 0, тогда инпуту задаем disabled -->
+                                                <input type="checkbox" value="Y" name="arrFilter_26028_4059395850" id="arrFilter_26028_4059395850" disabled="disabled">
+                                                <span class="bx-filter-param-text" title="256 ГБ"><span class="text">256 ГБ</span>&nbsp;<span data-role="count_arrFilter_26028_4059395850">0</span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="clear: both"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 bx-filter-parameters-box">
+                        <span class="bx-filter-container-modef"></span>
+                        <div class="bx-filter-parameters-box-title">
+                            <span class="bx-filter-parameters-box-hint">Количество основных камер 
+                            </span>
+                            <!--иконку так сделать-->
+                            <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#icon-arrow-top-bl"></use>
+                            </svg>
+                        </div>
+
+                        <div class="bx-filter-block" data-role="bx_filter_block">
+                            <div class="row bx-filter-parameters-box-container">
+                                <div class="col-xs-12">
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26079_1217942513" class="bx-filter-param-label" for="arrFilter_26079_1217942513">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26079_1217942513" id="arrFilter_26079_1217942513">
+                                                <span class="bx-filter-param-text" title="1"><span class="text">1</span>&nbsp;<span data-role="count_arrFilter_26079_1217942513">15</span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26079_3515941451" class="bx-filter-param-label" for="arrFilter_26079_3515941451">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26079_3515941451" id="arrFilter_26079_3515941451">
+                                                <span class="bx-filter-param-text" title="2"><span class="text">2</span>&nbsp;<span data-role="count_arrFilter_26079_3515941451">330</span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26079_2794861277" class="bx-filter-param-label" for="arrFilter_26079_2794861277">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26079_2794861277" id="arrFilter_26079_2794861277">
+                                                <span class="bx-filter-param-text" title="3"><span class="text">3</span>&nbsp;<span data-role="count_arrFilter_26079_2794861277">480</span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26079_908668748" class="bx-filter-param-label" for="arrFilter_26079_908668748">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26079_908668748" id="arrFilter_26079_908668748">
+                                                <span class="bx-filter-param-text" title="4"><span class="text">4</span>&nbsp;<span data-role="count_arrFilter_26079_908668748">43</span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="clear: both"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 bx-filter-parameters-box">
+                        <span class="bx-filter-container-modef"></span>
+                        <div class="bx-filter-parameters-box-title">
+                            <span class="bx-filter-parameters-box-hint">Модуль NFC 
+                            </span>
+                            <!--иконку так сделать-->
+                            <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#icon-arrow-top-bl"></use>
+                            </svg>
+                        </div>
+
+                        <div class="bx-filter-block" data-role="bx_filter_block">
+                            <div class="row bx-filter-parameters-box-container">
+                                <div class="col-xs-12">
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26279_4242254561" class="bx-filter-param-label" for="arrFilter_26279_4242254561">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26279_4242254561" id="arrFilter_26279_4242254561">
+                                                <span class="bx-filter-param-text" title="Есть"><span class="text">Есть</span>&nbsp;<span data-role="count_arrFilter_26279_4242254561">831</span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26279_2346490487" class="bx-filter-param-label" for="arrFilter_26279_2346490487">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26279_2346490487" id="arrFilter_26279_2346490487">
+                                                <span class="bx-filter-param-text" title="Отсутствует"><span class="text">Отсутствует</span>&nbsp;<span data-role="count_arrFilter_26279_2346490487">37</span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="clear: both"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 bx-filter-parameters-box">
+                        <span class="bx-filter-container-modef"></span>
+                        <div class="bx-filter-parameters-box-title">
+                            <span class="bx-filter-parameters-box-hint"><span class="text">Беспроводная зарядка</span> 
+                            </span>
+                            <!--иконку так сделать-->
+                            <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#icon-arrow-top-bl"></use>
+                            </svg>
+                        </div>
+
+                        <div class="bx-filter-block" data-role="bx_filter_block">
+                            <div class="row bx-filter-parameters-box-container">
+                                <div class="col-xs-12">
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26299_468609398" class="bx-filter-param-label" for="arrFilter_26299_468609398">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26299_468609398" id="arrFilter_26299_468609398">
+                                                <span class="bx-filter-param-text" title="Есть"><span class="text">Есть</span>&nbsp;<span data-role="count_arrFilter_26299_468609398">627</span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26299_1827232224" class="bx-filter-param-label" for="arrFilter_26299_1827232224">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26299_1827232224" id="arrFilter_26299_1827232224">
+                                                <span class="bx-filter-param-text" title="Отсутствует"><span class="text">Отсутствует</span>&nbsp;<span data-role="count_arrFilter_26299_1827232224">241</span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="clear: both"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--//row-->
+                <div class="row">
+                    <div class="col-xs-12 bx-filter-button-box">
+                        <div class="bx-filter-block">
+                            <div class="bx-filter-parameters-box-container">
+                                <!-- value поменять и добавить класс btn-reset-->
+                                <input class="btn btn-link btn-reset" type="button" id="del_filter" name="del_filter" value="Сбросить все фильтры">
+                                <!-- тут добавить кнопку -->
+
+								<div class="filter-chips catalog-chips"></div>
+                                <a href="#" class="button button__full filter-button">Применить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clb"></div>
+                <input type="hidden" name="utm_source" value="-"><input type="hidden" name="utm_medium" value="-"><input type="hidden" name="utm_campaign" value="-"><input type="hidden" name="utm_content" value="-"><input type="hidden" name="utm_term" value="-">
+            </form>
+        </div>
+    </div>
+</div>

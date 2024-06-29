@@ -1,0 +1,51 @@
+.insurance-min-tab {
+    display: none;
+    &__specification {
+        border-top: .5px solid #E1E1E3;
+        padding: 20px 12px;
+        @media (min-width: $phone-big-screen-size) {
+            padding: 24px 0;
+        }
+    }
+    &__info {
+        padding: 20px 12px;
+        border-top: .5px solid #E1E1E3;
+        @media (min-width: $phone-big-screen-size) {
+            padding: 24px 0;
+        }
+    }
+    &__info-title {
+        font-weight: 600;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+    &__info-list {
+        display: grid;
+        gap: 8px;
+        grid-template-columns: 1fr;
+        list-style: none;
+        font-size: 14px;
+        line-height: 20px;
+        @media (min-width: $phone-big-screen-size) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    &__info-list-title {
+        margin-bottom: 4px;
+    }
+    &__info-list-desc {
+        color: #7D7D7D;
+    }
+    &__button-box {
+        padding: 12px;
+        border-top: 0.5px solid #E1E1E3;
+        @media (min-width: $phone-big-screen-size) {
+            padding: 12px 0;
+        }
+    }
+    &__button {
+        * span {
+            pointer-events: none;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.catalog-control {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background: #F5F5F7;
+    @media (max-width: $tablet-screen-size - 1px) {
+        display: none;
+    }
+    &__button {
+        background: #F5F5F7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        color: #7D7D7D;
+        border-radius: 8px;
+        * {
+            pointer-events: none;
+        }
+        &:hover {
+            color: $black;
+        }
+        &_active {
+            background: $black;
+            color: #fff;
+            pointer-events: none;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}

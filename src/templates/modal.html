@@ -1,0 +1,885 @@
+<div class="modal" id="city">
+    <p class="modal__title">Выберите свой город</p>
+    <p class="modal__desc">Вы можете выбрать более <b>150 000</b> населённых пунктов по всей Российской Федерации</p>
+    <div class="city-search">
+        <div class="city-search__box">
+            <input type="text" class="city-search__input input-text" placeholder="Ваш город..." autofocus="false">
+            <a href="#" class="city-search__clear">
+                <svg width="24" height="24">
+                    <use xlink:href="img/sprite.svg#icon-close"></use>
+                </svg>
+            </a>
+            <svg width="24" height="24" class="city-search__input-icon">
+                <use xlink:href="img/sprite.svg#icon-search"></use>
+            </svg>
+        </div>
+        <div class="city-search__content">
+            <ul class="city-search__list-main city-search__ul">
+                <li class="city-search__li-main">
+                    <a href="#" class="city-search__link-main city-search__link-main_current">Славянск-на-Кубани</a>
+                </li>
+                <li class="city-search__li-main">
+                    <a href="#" class="city-search__link-main">Сочи</a>
+                </li>
+                <li class="city-search__li-main">
+                    <a href="#" class="city-search__link-main">Новороссийск</a>
+                </li>
+                <li class="city-search__li-main">
+                    <a href="#" class="city-search__link-main">Геленджик</a>
+                </li>
+                <li class="city-search__li-main">
+                    <a href="#" class="city-search__link-main">Анапа</a>
+                </li>
+                <li class="city-search__li-main">
+                    <a href="#" class="city-search__link-main">Армавир</a>
+                </li>
+            </ul>
+            <ul class="city-search__list city-search__ul">
+                <li class="city-search__li">
+                    <a href="#" class="city-search__link">Ейск</a>
+                </li>
+                <li class="city-search__li">
+                    <a href="#" class="city-search__link">Кропоткин</a>
+                </li>
+                <li class="city-search__li">
+                    <a href="#" class="city-search__link">Иркутск</a>
+                </li>
+                <li class="city-search__li">
+                    <a href="#" class="city-search__link">Туапсе</a>
+                </li>
+                <li class="city-search__li">
+                    <a href="#" class="city-search__link">Тихорецк</a>
+                </li>
+                <li class="city-search__li">
+                    <a href="#" class="city-search__link">Лабинск</a>
+                </li>
+            </ul>
+            <ul class="city-search__list city-search__ul">
+                <li class="city-search__li">
+                    <a href="#" class="city-search__link">Крымск</a>
+                </li>
+                <li class="city-search__li">
+                    <a href="#" class="city-search__link">Белореченск</a>
+                </li>
+                <li class="city-search__li">
+                    <a href="#" class="city-search__link">Москва</a>
+                </li>
+                <li class="city-search__li">
+                    <a href="#" class="city-search__link">Санкт-Петербург</a>
+                </li>
+                <li class="city-search__li">
+                    <a href="#" class="city-search__link">Новосибирск</a>
+                </li>
+                <li class="city-search__li">
+                    <a href="#" class="city-search__link">Екатеринбург</a>
+                </li>
+            </ul>
+            <ul class="city-search__list city-search__ul">
+                <li class="city-search__li">
+                    <a href="#" class="city-search__link">Казань</a>
+                </li>
+                <li class="city-search__li">
+                    <a href="#" class="city-search__link">Нижний Новгород</a>
+                </li>
+                <li class="city-search__li">
+                    <a href="#" class="city-search__link">Челябинск</a>
+                </li>
+                <li class="city-search__li">
+                    <a href="#" class="city-search__link">Самара</a>
+                </li>
+                <li class="city-search__li">
+                    <a href="#" class="city-search__link">Омск</a>
+                </li>
+                <li class="city-search__li">
+                    <a href="#" class="city-search__link">Ростов-на-Дону</a>
+                </li>
+            </ul>
+            <ul class="city-search__list city-search__ul">
+                <li class="city-search__li">
+                    <a href="#" class="city-search__link">Уфа</a>
+                </li>
+                <li class="city-search__li">
+                    <a href="#" class="city-search__link">Красноярск</a>
+                </li>
+                <li class="city-search__li">
+                    <a href="#" class="city-search__link">Воронеж</a>
+                </li>
+                <li class="city-search__li">
+                    <a href="#" class="city-search__link">Пермь</a>
+                </li>
+                <li class="city-search__li">
+                    <a href="#" class="city-search__link">Волгоград</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal__s" id="call-back">
+    <p class="modal__title _center">Заказать звонок</p>
+    <form class="modal__form formValid">
+        <label class="input-text__label">
+            <input type="text" class="input-text input-text_type-2 input-text_sl" name="name" data-rule="required|required">
+            <span class="input-text__label-text">Имя <span>*</span></span>
+        </label>
+        <label class="input-text__label">
+            <input type="text" class="input-text input-text_type-2 input-text_sl js-mask" name="phone" data-rule="phonemask|required">
+            <span class="input-text__label-text">Телефон <span>*</span></span>
+        </label>
+        <label class="textarea-text__label">
+            <textarea class="textarea-text textarea-text_type-2" name="comment" placeholder=""></textarea>
+            <span class="textarea-text__label-text">Комментарий</span>
+        </label>
+        <input type="submit" value="Отправить" class="button button__full form-button" disabled>
+        <p class="form-desc">Нажимая кнопку «Отправить», я подтверждаю, что ознакомлен и согласен <a href="#">с политикой конфиденциальности и офертой</a></p>
+    </form>
+</div>
+
+<div class="modal modal__reviews" id="reviews">
+    <div class="modal__reviews-content">
+        <p class="modal__title center">Мой отзыв</p>
+        <div class="catalog-mini__item">
+            <a href="#" class="catalog-mini__link">
+                <div class="catalog-mini__img-box">
+                    <img src="img/content/22.png" alt="">
+                </div>
+                <div class="catalog-mini__text">
+                    <div class="catalog-mini__ptice">
+                        <p>220 990<span>₽</span></p>
+                    </div>
+                    <p class="catalog-mini__name">Ноутбук Apple Macbook Pro 16» (2023) M2&nbsp;Pro 16&nbsp;ГБ, 512&nbsp;ГБ&nbsp;SSD, серебристый (MNWC3)</p>
+                </div>
+            </a>
+        </div>
+        <div class="reviews-rating">
+            <form class="modal__form formValid">
+                <div class="reviews-rating__select">
+                    <p class="reviews-rating__select-title">
+                        Оцените товар<span>*</span>
+                    </p>
+                    <div class="reviews-rating__select-stars"></div>
+                    <input type="hidden" class="reviews-rating__select-input">
+                </div>
+                
+                <label class="input-text__label">
+                    <input type="text" class="input-text input-text_type-2 input-text_sl" name="name" data-rule="required|required">
+                    <span class="input-text__label-text">Имя <span>*</span></span>
+                </label>
+                <label class="input-text__label">
+                    <input type="text" class="input-text input-text_type-2 input-text_sl" name="dignity">
+                    <span class="input-text__label-text">Достоинства</span>
+                </label>
+                <label class="input-text__label">
+                    <input type="text" class="input-text input-text_type-2 input-text_sl" name="flaws">
+                    <span class="input-text__label-text">Недостатки</span>
+                </label>
+                <label class="textarea-text__label">
+                    <textarea class="textarea-text textarea-text_type-2" name="comment" placeholder=""></textarea>
+                    <span class="textarea-text__label-text">Комментарий</span>
+                </label>
+                <input type="submit" value="Отправить" class="button button__full form-button" disabled>
+                <p class="form-desc">Нажимая кнопку «Отправить», я подтверждаю, что ознакомлен и согласен <a href="#">с политикой конфиденциальности и офертой</a></p>
+                
+            </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="modal modal__best-price" id="best-price">
+    <div class="modal__best-price-content">
+        <p class="modal__title modal__best-price-title">У нас выгоднее!</p>
+        <p class="modal__best-price-desc">Мы нашли этот товар ещё в 4 магазинах и там его цена выше</p>
+        <div class="modal__best-price-list">
+            <dl class="modal__best-price-dl modal__best-price-dl_first">
+                <dt class="modal__best-price-dt">CMstore</dt>
+                <dd class="modal__best-price-dd"><p>122 990 ₽</p></dd>
+            </dl>
+            <dl class="modal__best-price-dl">
+                <dt class="modal__best-price-dt">М. Видео</dt>
+                <dd class="modal__best-price-dd">
+                    <p>165 999 ₽</p>
+                    <span>дороже на 43 459 ₽</span>
+                </dd>
+            </dl>
+            <dl class="modal__best-price-dl">
+                <dt class="modal__best-price-dt">Ситилинк</dt>
+                <dd class="modal__best-price-dd">
+                    <p>140 009 ₽</p>
+                    <span>дороже на 20 079 ₽</span>
+                </dd>
+            </dl>
+            <dl class="modal__best-price-dl">
+                <dt class="modal__best-price-dt">Технопарк</dt>
+                <dd class="modal__best-price-dd">
+                    <p>135 999 ₽</p>
+                    <span>дороже на 15 009 ₽</span>
+                </dd>
+            </dl>
+            <dl class="modal__best-price-dl">
+                <dt class="modal__best-price-dt">DNS</dt>
+                <dd class="modal__best-price-dd">
+                    <p>130 999 ₽</p>
+                    <span>дороже на 10 459 ₽</span>
+                </dd>
+            </dl>
+            <dl class="modal__best-price-dl">
+                <dt class="modal__best-price-dt">restore:</dt>
+                <dd class="modal__best-price-dd">
+                    <p>128 999 ₽</p>
+                    <span>дороже на 8 459 ₽</span>
+                </dd>
+            </dl>
+        </div>
+        <a href="#" class="cart-purchase__benefit js-modal-inline" data-src="best-price-form">
+            <p>Гарантия низкой цены!</p>
+            <span>Нашли дешевле? Отправьте ссылку на товар и мы снизим для вас цену!</span>
+        </a>
+    </div>
+</div>
+
+<div class="modal modal__best-price-conditions" id="best-price-conditions">
+    <a href="#" data-src="best-price-form" class="modal__back js-modal-inline">
+        <svg width="24" height="24">
+            <use xlink:href="img/sprite.svg#icon-modal-back"></use>
+        </svg>
+    </a>
+    <p class="modal__title modal__best-price-conditions-title">Условия акции «Гарантия низкой цены»</p>
+    <ul>
+        <li>Предложения «СMstore» и конкурента идентичны. Полностью совпадают: наименование товара, модель, ключевые технические характеристики, комплектация и цвет.</li>
+        <li>При сравнении учитываются только цены на новый товар (не б/у, товар и упаковка без дефектов, полная комплектация, не витринный образец)</li>
+        <li>Конкурент не является только интернет-магазином и имеет точки продаж в том же городе, в котором планируется покупка в магазине CMstore.</li>
+        <li>Предложение конкурента не является очевидной ошибкой и не обусловлено техническим сбоем сайта</li>
+        <li>На момент сравнения товар у конкурента в наличии в том же городе, в котором планируется покупка в магазине CMstore и доступен там для самовывоза или доставки.</li>
+        <li>Товарная позиция с действующим ценовым предложением представлена на сайте конкурента на момент совершения покупки с учётом города обращения</li>
+        <li>Цена конкурента не является акционным предложением</li>
+    </ul>
+</div>
+
+<div class="modal modal__best-price-form" id="best-price-form">
+    <p class="modal__title modal__best-price-title">Гарантия низкой цены</p>
+        <p class="modal__best-price-form-desc">
+            Мы нашли этот товар ещё в 4 магазинах и там его цена выше
+            <span><a href="#" class="js-modal-inline" data-src="best-price-conditions">Условия акции</a></span>
+        </p>
+    <form class="modal__form formValid">
+        <label class="input-text__label">
+            <input type="text" class="input-text input-text_type-2 input-text_sl" name="name" data-rule="required|required">
+            <span class="input-text__label-text">Имя <span>*</span></span>
+        </label>
+        <label class="input-text__label">
+            <input type="text" class="input-text input-text_type-2 input-text_sl js-mask" name="phone" data-rule="phonemask|required">
+            <span class="input-text__label-text">Телефон <span>*</span></span>
+        </label>
+        <label class="input-text__label">
+            <input type="text" class="input-text input-text_type-2 input-text_sl" name="city" data-rule="required|required">
+            <span class="input-text__label-text">Город <span>*</span></span>
+        </label>
+        <label class="input-text__label">
+            <input type="text" class="input-text input-text_type-2 input-text_sl" name="link" data-rule="required|required">
+            <span class="input-text__label-text">Ссылка на товар конкурента <span>*</span></span>
+        </label>
+        <label class="textarea-text__label">
+            <textarea class="textarea-text textarea-text_type-2" name="comment" placeholder=""></textarea>
+            <span class="textarea-text__label-text">Комментарий</span>
+        </label>
+        <input type="submit" value="Отправить" class="button button__full form-button" disabled>
+        <p class="form-desc">Нажимая кнопку «Отправить», я подтверждаю, что ознакомлен и согласен <a href="#">с политикой конфиденциальности и офертой</a></p>
+    </form>
+</div>
+
+<div class="modal modal__availability" id="availability">
+    <div class="modal__availability-content">
+        <p class="modal__title">Наличие в магазинах</p>
+        <div class="availability-tabs">
+            <ul class="availability-tabs__links">
+                <li><a href="#" class="availability-tabs__link _current link-map">Карта</a></li>
+                <li><a href="#" class="availability-tabs__link link-list">Список</a></li>
+            </ul>
+            <div class="availability-tabs__box availability-tabs__box_list-box">
+                <ul class="availability__list">
+                    <li class="availability__li">
+                        <div class="availability__content">
+                            <div class="availability__info">
+                                <div class="availability__shop">
+                                    <p class="availability__address">ул. 40-летия Победы, 69/1</p>
+                                    <p class="availability__time-work">Пн-Вс: 9:00–21:00</p>
+                                </div>
+                                <p class="availability__time">через 15 минут</p>
+                            </div>
+                            <div class="availability__sum">
+                                <div class="availability__sum-dotted">
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                </div>
+                                <span>Много</span>
+                            </div>
+                        </div>
+                        <a href="#" class="button button__full availability__button">Оформить заказ</a>
+                    </li>
+                    <li class="availability__li">
+                        <div class="availability__content">
+                            <div class="availability__info">
+                                <div class="availability__shop">
+                                    <p class="availability__address">ул. Дзержинского, 100</p>
+                                    <p class="availability__time-work">Пн-Вс: 10:00–22:00</p>
+                                </div>
+                                <p class="availability__time">через 15 минут</p>
+                            </div>
+                            <div class="availability__sum">
+                                <div class="availability__sum-dotted">
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                </div>
+                                <span>Много</span>
+                            </div>
+                        </div>
+                        <a href="#" class="button button__full availability__button">Оформить заказ</a>
+                    </li>
+                    <li class="availability__li">
+                        <div class="availability__content">
+                            <div class="availability__info">
+                                <div class="availability__shop">
+                                    <p class="availability__address">ул. Красная, 162</p>
+                                    <p class="availability__time-work">Пн-Вс: 10:00–22:00</p>
+                                </div>
+                                <p class="availability__time">через 15 минут</p>
+                            </div>
+                            <div class="availability__sum">
+                                <div class="availability__sum-dotted">
+                                    <i></i>
+                                    <i></i>
+                                </div>
+                                <span>Достаточно</span>
+                            </div>
+                        </div>
+                        <a href="#" class="button button__full availability__button">Оформить заказ</a>
+                    </li>
+                    <li class="availability__li">
+                        <div class="availability__content">
+                            <div class="availability__info">
+                                <div class="availability__shop">
+                                    <p class="availability__address">просп. Чекистов, 17</p>
+                                    <p class="availability__time-work">Пн-Вс: 10:00–22:00</p>
+                                </div>
+                                <p class="availability__time">через 15 минут</p>
+                            </div>
+                            <div class="availability__sum">
+                                <div class="availability__sum-dotted">
+                                    <i></i>
+                                </div>
+                                <span>Мало</span>
+                            </div>
+                        </div>
+                        <a href="#" class="button button__full availability__button">Оформить заказ</a>
+                    </li>
+                    <li class="availability__li">
+                        <div class="availability__content">
+                            <div class="availability__info">
+                                <div class="availability__shop">
+                                    <p class="availability__address">ул. Игнатова, 18</p>
+                                    <p class="availability__time-work">Пн-Вс: 10:00–22:00</p>
+                                </div>
+                                <p class="availability__time">через 1-3 дня</p>
+                            </div>
+                            <div class="availability__sum">
+                                <div class="availability__sum-dotted"></div>
+                                <span>Под заказ</span>
+                            </div>
+                        </div>
+                        <a href="#" class="button button__full availability__button">Оформить заказ</a>
+                    </li>
+                    <li class="availability__li">
+                        <div class="availability__content">
+                            <div class="availability__info">
+                                <div class="availability__shop">
+                                    <p class="availability__address">просп. Чекистов, 88</p>
+                                    <p class="availability__time-work">Пн-Вс: 10:00–22:00</p>
+                                </div>
+                                <p class="availability__time">через 1-3 дня</p>
+                            </div>
+                            <div class="availability__sum">
+                                <div class="availability__sum-dotted"></div>
+                                <span>Под заказ</span>
+                            </div>
+                        </div>
+                        <a href="#" class="button button__full availability__button">Оформить заказ</a>
+                    </li>
+                    <li class="availability__li">
+                        <div class="availability__content">
+                            <div class="availability__info">
+                                <div class="availability__shop">
+                                    <p class="availability__address">ул. Игнатова, 21</p>
+                                    <p class="availability__time-work">Пн-Вс: 10:00–22:00</p>
+                                </div>
+                                <p class="availability__time">через 1-3 дня</p>
+                            </div>
+                            <div class="availability__sum">
+                                <div class="availability__sum-dotted"></div>
+                                <span>Под заказ</span>
+                            </div>
+                        </div>
+                        <a href="#" class="button button__full availability__button">Оформить заказ</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="availability-tabs__box availability-tabs__box_map _show">
+                <div class="availability__maps" id="map-availability"></div>
+            </div>
+        </div>
+        <div class="availability__button-box">
+            <a href="#" class="button button__full availability__button-bt _disabled">Оформить заказ</a>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal__insurance" id="insurance">
+    <div class="modal__insurance-content modal__insurance-content_desktop">
+        <p class="modal__insurance-title">Защити своё устройство с максимальной выгодой</p>
+        <ul class="insurance-advantage">
+            <li class="insurance-advantage__li">
+                <p class="insurance-advantage__title">Комфорт</p>
+                <p class="insurance-advantage__text">Если произошёл страховой случай, просто обратитесь в магазин CMstore</p>
+            </li>
+            <li class="insurance-advantage__li">
+                <p class="insurance-advantage__title">Скорость</p>
+                <p class="insurance-advantage__text">Проведём диагностику и ремонт вашего устройства в течение 10 дней</p>
+            </li>
+            <li class="insurance-advantage__li">
+                <p class="insurance-advantage__title">Результат</p>
+                <p class="insurance-advantage__text">Если ремонт невозможен, выплатим компенсацию</p>
+            </li>
+        </ul>
+        <div class="insurance-offers">
+            <div class="insurance-offers__items item">
+                <div class="insurance-offers__items-content">
+                    <div class="insurance-offers__items-head">
+                        <p class="insurance-offers__title">«Срок службы плюс»</p>
+                        <p class="insurance-offers__desc">Расширение срока заводской гарантии до двух, трёх, или пяти лет</p>
+                    </div>
+                    <p class="insurance-offers__title-list">От чего защищает полис</p>
+                    <ul class="insurance-offers__list">
+                        <li class="insurance-offers__li">
+                            <img src="img/content/insurance/1.svg" alt="">
+                            <div class="insurance-offers__li-box">
+                                <p class="insurance-offers__li-title">Гарантийные поломки</p>
+                                <p class="insurance-offers__li-desc">Заводской дефект устройства</p>
+                            </div>
+                        </li>
+                        <li class="insurance-offers__li">
+                            <img src="img/content/insurance/2.svg" alt="">
+                            <div class="insurance-offers__li-box">
+                                <p class="insurance-offers__li-title">Воздействие электроэнергии (1 год)</p>
+                                <p class="insurance-offers__li-desc">Короткое замыкание, перепад напряжения</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="insurance-foot">
+                    <p class="insurance-foot__title">Период действия</p>
+                    <ul class="insurance-foot__list insurance-foot__list_col3">
+                        <li class="insurance-foot__li">
+                            <a href="#" class="insurance-foot__select _current" data-price="12900">2 года</a>
+                        </li>
+                        <li class="insurance-foot__li">
+                            <a href="#" class="insurance-foot__select" data-price="48000">3 года</a>
+                        </li>
+                        <li class="insurance-foot__li">
+                            <a href="#" class="insurance-foot__select" data-price="99990">5 лет</a>
+                        </li>
+                    </ul>
+                    <div class="insurance-foot__price-box">
+                        <p class="insurance-foot__price"><span>12 900</span>₽</p>
+                        <a href="#" class="button insurance-foot__button" data-no="Добавить" data-ok="Добавлена" data-id="1">
+                            <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#icon-plus"></use>
+                            </svg>
+                            <span>Добавить</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insurance-offers__items item">
+                <div class="insurance-offers__items-content">
+                    <div class="insurance-offers__items-head">
+                        <p class="insurance-offers__title">«Техника в безопасности»</p>
+                        <p class="insurance-offers__desc">Ремонт вашего устройства в течение 10 дней в случае любой поломки</p>
+                    </div>
+                    <p class="insurance-offers__title-list">От чего защищает полис</p>
+                    <ul class="insurance-offers__list">
+                        <li class="insurance-offers__li">
+                            <img src="img/content/insurance/3.svg" alt="">
+                            <div class="insurance-offers__li-box">
+                                <p class="insurance-offers__li-title">Внешнее механическое воздействие</p>
+                                <p class="insurance-offers__li-desc">Треснул экран, сломалась камера и т.д.</p>
+                            </div>
+                        </li>
+                        <li class="insurance-offers__li">
+                            <img src="img/content/insurance/4.svg" alt="">
+                            <div class="insurance-offers__li-box">
+                                <p class="insurance-offers__li-title">Кража</p>
+                                <p class="insurance-offers__li-desc">Разбой, грабёж, хулиганство, кража </p>
+                            </div>
+                        </li>
+                        <li class="insurance-offers__li">
+                            <img src="img/content/insurance/5.svg" alt="">
+                            <div class="insurance-offers__li-box">
+                                <p class="insurance-offers__li-title">Воздействие жидкости</p>
+                                <p class="insurance-offers__li-desc">Попала вода или другая жидкость</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="insurance-foot">
+                    <p class="insurance-foot__title">Период действия</p>
+                    <ul class="insurance-foot__list insurance-foot__list_col1">
+                        <li class="insurance-foot__li">
+                            <a href="#" class="insurance-foot__select _current"  data-price="1800">1 год</a>
+                        </li>
+                    </ul>
+                    <div class="insurance-foot__price-box">
+                        <p class="insurance-foot__price"><span>1 800</span>₽</p>
+                        <a href="#" class="button insurance-foot__button" data-no="Добавить" data-ok="Добавлена" data-id="2">
+                            <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#icon-plus"></use>
+                            </svg>
+                            <span>Добавить</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insurance-offers__items item">
+                <div class="insurance-offers__items-content">
+                    <div class="insurance-offers__items-head">
+                        <p class="insurance-offers__title">«Сверхвозможности»</p>
+                        <p class="insurance-offers__desc">Защита устройства от повреждений и утраты + продление срока гаранитии</p>
+                    </div>
+                    <p class="insurance-offers__title-list">От чего защищает полис</p>
+                    <ul class="insurance-offers__list">
+                        <li class="insurance-offers__li">
+                            <img src="img/content/insurance/3.svg" alt="">
+                            <div class="insurance-offers__li-box">
+                                <p class="insurance-offers__li-title">Внешнее механическое воздействие</p>
+                                <p class="insurance-offers__li-desc">Треснул экран, сломалась камера и т.д.</p>
+                            </div>
+                        </li>
+                        <li class="insurance-offers__li">
+                            <img src="img/content/insurance/4.svg" alt="">
+                            <div class="insurance-offers__li-box">
+                                <p class="insurance-offers__li-title">Кража</p>
+                                <p class="insurance-offers__li-desc">Разбой, грабёж, хулиганство, кража </p>
+                            </div>
+                        </li>
+                        <li class="insurance-offers__li">
+                            <img src="img/content/insurance/5.svg" alt="">
+                            <div class="insurance-offers__li-box">
+                                <p class="insurance-offers__li-title">Воздействие жидкости</p>
+                                <p class="insurance-offers__li-desc">Попала вода или другая жидкость</p>
+                            </div>
+                        </li>
+                        <li class="insurance-offers__li">
+                            <img src="img/content/insurance/2.svg" alt="">
+                            <div class="insurance-offers__li-box">
+                                <p class="insurance-offers__li-title">Воздействие электроэнергии (1 год)</p>
+                                <p class="insurance-offers__li-desc">Короткое замыкание, перепад напряжения</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="insurance-foot">
+                    <p class="insurance-foot__title">Период действия</p>
+                    <ul class="insurance-foot__list insurance-foot__list_col3">
+                        <li class="insurance-foot__li">
+                            <a href="#" class="insurance-foot__select _current" data-price="23990">2 года</a>
+                        </li>
+                        <li class="insurance-foot__li">
+                            <a href="#" class="insurance-foot__select" data-price="48000">3 года</a>
+                        </li>
+                        <li class="insurance-foot__li">
+                            <a href="#" class="insurance-foot__select" data-price="99990">5 лет</a>
+                        </li>
+                    </ul>
+                    <div class="insurance-foot__price-box">
+                        <p class="insurance-foot__price"><span>23 990</span>₽</p>
+                        <a href="#" class="button insurance-foot__button" data-no="Добавить" data-ok="Добавлена"  data-id="3">
+                            <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#icon-plus"></use>
+                            </svg>
+                            <span>Добавить</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal__insurance-content modal__insurance-content_mobile">
+        <p class="modal__insurance-title">Защита устройства</p>
+        <div class="modal__insurance-content-scroll">
+            <div class="insurance-min-select">
+                <div class="insurance-min-select__item">
+                    <div class="insurance-min-select__box">
+                        <p class="insurance-min-select__title">«Срок службы плюс»</p>
+                        <p class="insurance-min-select__desc">Расширение срока заводской гарантии до&nbsp;двух, трёх, или&nbsp;пяти&nbsp;лет</p>
+                    </div>
+                    <p class="insurance-min-select__price">от <span>12 000</span> ₽</p>
+                </div>
+                <div class="insurance-min-select__item">
+                    <div class="insurance-min-select__box">
+                        <p class="insurance-min-select__title">«Техника в безопасности»</p>
+                        <p class="insurance-min-select__desc">Ремонт вашего устройства в течение 10 дней в случае любой поломки</p>
+                    </div>
+                    <p class="insurance-min-select__price"><span>6 000</span> ₽</p>
+                </div>
+                <div class="insurance-min-select__item _current">
+                    <div class="insurance-min-select__box">
+                        <p class="insurance-min-select__title">«Сверхвозможности»</p>
+                        <p class="insurance-min-select__desc">Защита устройства от повреждений и утраты + продление срока гаранитии</p>
+                    </div>
+                    <p class="insurance-min-select__price">от <span>23 990</span> ₽</p>
+                </div>
+            </div>
+            <div class="insurance-min-tab item">
+                <div class="insurance-min-tab__specification">
+                    <p class="insurance-offers__title-list">От чего защищает полис</p>
+                    <ul class="insurance-offers__list">
+                        <li class="insurance-offers__li">
+                            <img src="img/content/insurance/1.svg" alt="">
+                            <div class="insurance-offers__li-box">
+                                <p class="insurance-offers__li-title">Гарантийные поломки</p>
+                                <p class="insurance-offers__li-desc">Заводской дефект устройства</p>
+                            </div>
+                        </li>
+                        <li class="insurance-offers__li">
+                            <img src="img/content/insurance/2.svg" alt="">
+                            <div class="insurance-offers__li-box">
+                                <p class="insurance-offers__li-title">Воздействие электроэнергии (1&nbsp;год)</p>
+                                <p class="insurance-offers__li-desc">Короткое замыкание, перепад напряжения</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="insurance-foot">
+                    <p class="insurance-foot__title">Период действия</p>
+                    <ul class="insurance-foot__list insurance-foot__list_col3">
+                        <li class="insurance-foot__li">
+                            <a href="#" class="insurance-foot__select _current" data-price="12900">2 года</a>
+                        </li>
+                        <li class="insurance-foot__li">
+                            <a href="#" class="insurance-foot__select" data-price="48000">3 года</a>
+                        </li>
+                        <li class="insurance-foot__li">
+                            <a href="#" class="insurance-foot__select" data-price="99990">5 лет</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="insurance-min-tab item">
+                <div class="insurance-min-tab__specification">
+                    <p class="insurance-offers__title-list">От&nbsp;чего защищает полис</p>
+                    <ul class="insurance-offers__list">
+                        <li class="insurance-offers__li">
+                            <img src="img/content/insurance/3.svg" alt="">
+                            <div class="insurance-offers__li-box">
+                                <p class="insurance-offers__li-title">Внешнее механическое воздействие</p>
+                                <p class="insurance-offers__li-desc">Треснул экран, сломалась камера и т.д.</p>
+                            </div>
+                        </li>
+                        <li class="insurance-offers__li">
+                            <img src="img/content/insurance/4.svg" alt="">
+                            <div class="insurance-offers__li-box">
+                                <p class="insurance-offers__li-title">Кража</p>
+                                <p class="insurance-offers__li-desc">Разбой, грабёж, хулиганство, кража </p>
+                            </div>
+                        </li>
+                        <li class="insurance-offers__li">
+                            <img src="img/content/insurance/5.svg" alt="">
+                            <div class="insurance-offers__li-box">
+                                <p class="insurance-offers__li-title">Воздействие жидкости</p>
+                                <p class="insurance-offers__li-desc">Попала вода или&nbsp;другая жидкость</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="insurance-foot">
+                    <p class="insurance-foot__title">Период действия</p>
+                    <ul class="insurance-foot__list insurance-foot__list_col1">
+                        <li class="insurance-foot__li">
+                            <a href="#" class="insurance-foot__select _current"  data-price="1800">1 год</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="insurance-min-tab item _current" style="display: block;">
+                <div class="insurance-min-tab__specification">
+                    <p class="insurance-offers__title-list">От&nbsp;чего защищает полис</p>
+                    <ul class="insurance-offers__list">
+                        <li class="insurance-offers__li">
+                            <img src="img/content/insurance/3.svg" alt="">
+                            <div class="insurance-offers__li-box">
+                                <p class="insurance-offers__li-title">Внешнее механическое воздействие</p>
+                                <p class="insurance-offers__li-desc">Треснул экран, сломалась камера и т.д.</p>
+                            </div>
+                        </li>
+                        <li class="insurance-offers__li">
+                            <img src="img/content/insurance/4.svg" alt="">
+                            <div class="insurance-offers__li-box">
+                                <p class="insurance-offers__li-title">Кража</p>
+                                <p class="insurance-offers__li-desc">Разбой, грабёж, хулиганство, кража </p>
+                            </div>
+                        </li>
+                        <li class="insurance-offers__li">
+                            <img src="img/content/insurance/5.svg" alt="">
+                            <div class="insurance-offers__li-box">
+                                <p class="insurance-offers__li-title">Воздействие жидкости</p>
+                                <p class="insurance-offers__li-desc">Попала вода или&nbsp;другая жидкость</p>
+                            </div>
+                        </li>
+                        <li class="insurance-offers__li">
+                            <img src="img/content/insurance/2.svg" alt="">
+                            <div class="insurance-offers__li-box">
+                                <p class="insurance-offers__li-title">Воздействие электроэнергии (1&nbsp;год)</p>
+                                <p class="insurance-offers__li-desc">Короткое замыкание, перепад напряжения</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="insurance-min-tab__info">
+                    <p class="insurance-min-tab__info-title">Защита с максимальной выгодой</p>
+                    <ul class="insurance-min-tab__info-list">
+                        <li class="insurance-min-tab__info-li">
+                            <p class="insurance-min-tab__info-list-title">Комфорт</p>
+                            <p class="insurance-min-tab__info-list-desc">Если произошёл страховой случай, просто обратитесь в магазин CMstore</p>
+                        </li>
+                        <li class="insurance-min-tab__info-li">
+                            <p class="insurance-min-tab__info-list-title">Скорость</p>
+                            <p class="insurance-min-tab__info-list-desc">Проведём диагностику и ремонт вашего устройства в течение 10 дней</p>
+                        </li>
+                        <li class="insurance-min-tab__info-li">
+                            <p class="insurance-min-tab__info-list-title">Результат</p>
+                            <p class="insurance-min-tab__info-list-desc">Если ремонт невозможен, выплатим компенсацию</p>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="insurance-foot">
+                    <p class="insurance-foot__title">Период действия</p>
+                    <ul class="insurance-foot__list insurance-foot__list_col3">
+                        <li class="insurance-foot__li">
+                            <a href="#" class="insurance-foot__select _current" data-price="12900">2 года</a>
+                        </li>
+                        <li class="insurance-foot__li">
+                            <a href="#" class="insurance-foot__select" data-price="48000">3 года</a>
+                        </li>
+                        <li class="insurance-foot__li">
+                            <a href="#" class="insurance-foot__select" data-price="99990">5 лет</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="insurance-min-tab__button-box">
+            <a href="#" class="button button__full insurance-min-tab__button">Оформить за <span>23 990</span> ₽</a>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal__remove" id="remove">
+    <p class="modal__remove-title">Действия с товаром</p>
+    <p class="modal__remove-text">Вы точно хотите удалить выбранный товар? Отменить данное действие будет невозможно</p>
+    <a href="#" class="button button__full basket__control-mob-link_remove-ok">Удалить</a>
+</div>
+
+<div class="modal modal__remove" id="remove-all">
+    <p class="modal__remove-title">Удалить все товары</p>
+    <p class="modal__remove-text">Вы уверены, что хотите удалить все товары из корзины? Отменить данное действие будет невозможно</p>
+    <a href="#" class="button button__full basket__control-mob-link_remove-ok">Удалить</a>
+</div>
+<div class="modal modal__remove" id="remove-check">
+    <p class="modal__remove-title">Удалить выбранные товары</p>
+    <p class="modal__remove-text">Вы уверены, что хотите удалить выбранные товары из корзины? Отменить данное действие будет невозможно</p>
+    <a href="#" class="button button__full basket__control-mob-link_remove-ok">Удалить</a>
+</div>
+
+<div class="modal modal__max" id="max">
+    <p class="modal__max-title">Не более 3-х товаров</p>
+    <p class="modal__max-text">В рамках одной покупки вы можете приобрести не более 3шт. одного товара. Если вы хотите больше 3 единиц одного товара, напишите на почту <a href="mailto:internetshop@cmstore.ru">internetshop@cmstore.ru</a></p>
+    <a href="#" class="button button__full modal-close">Понятно</a>
+</div>
+
+<div class="modal modal__credit-basket" id="credit">
+    <p class="modal__credit-basket-title">Купить в рассрочку или кредит</p>
+    
+    <div class="modal__credit-basket-body">
+        <div class="modal__credit-basket-text-box">
+            <p class="modal__credit-basket-text-title">Скидка не применяется при оформлении рассрочки или кредита</p>
+            <p class="modal__credit-basket-text">Стоимость товаров из вашего заказа будет пересчитана</p>
+        </div>
+        <div class="modal__credit-basket-items">
+            <a href="#" class="modal__credit-basket-item">
+                <div class="modal__credit-basket-item-img">
+                    <img src="img/content/22.png" alt="">
+                </div>
+                <p class="modal__credit-basket-item-name">Смартфон Apple iPhone 15 Pro Max 256 ГБ «синий титан»</p>
+                <div class="modal__credit-basket-item-price-box">
+                    <p class="modal__credit-basket-item-price">145 800 ₽</p>
+                    <p class="modal__credit-basket-item-sum"><span>1</span>шт</p>
+                </div>
+            </a>
+            <a href="#" class="modal__credit-basket-item">
+                <div class="modal__credit-basket-item-img">
+                    <img src="img/content/22.png" alt="">
+                </div>
+                <p class="modal__credit-basket-item-name">Смартфон Apple iPhone 15 Pro Max 256 ГБ «синий титан»</p>
+                <div class="modal__credit-basket-item-price-box">
+                    <p class="modal__credit-basket-item-price">145 800 ₽</p>
+                    <p class="modal__credit-basket-item-sum"><span>1</span>шт</p>
+                </div>
+            </a>
+            <a href="#" class="modal__credit-basket-item">
+                <div class="modal__credit-basket-item-img">
+                    <img src="img/content/22.png" alt="">
+                </div>
+                <p class="modal__credit-basket-item-name">Смартфон Apple iPhone 15 Pro Max 256 ГБ «синий титан»</p>
+                <div class="modal__credit-basket-item-price-box">
+                    <p class="modal__credit-basket-item-price">145 800 ₽</p>
+                    <p class="modal__credit-basket-item-sum"><span>1</span>шт</p>
+                </div>
+            </a>
+            <a href="#" class="modal__credit-basket-item">
+                <div class="modal__credit-basket-item-img">
+                    <img src="img/content/22.png" alt="">
+                </div>
+                <p class="modal__credit-basket-item-name">Смартфон Apple iPhone 15 Pro Max 256 ГБ «синий титан»</p>
+                <div class="modal__credit-basket-item-price-box">
+                    <p class="modal__credit-basket-item-price">145 800 ₽</p>
+                    <p class="modal__credit-basket-item-sum"><span>1</span>шт</p>
+                </div>
+            </a>
+            <a href="#" class="modal__credit-basket-item">
+                <div class="modal__credit-basket-item-img">
+                    <img src="img/content/22.png" alt="">
+                </div>
+                <p class="modal__credit-basket-item-name">Смартфон Apple iPhone 15 Pro Max 256 ГБ «синий титан»</p>
+                <div class="modal__credit-basket-item-price-box">
+                    <p class="modal__credit-basket-item-price">145 800 ₽</p>
+                    <p class="modal__credit-basket-item-sum"><span>1</span>шт</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="modal__credit-basket-foot">
+        <dl class="modal__credit-basket-sum">
+            <dt>Итого</dt>
+            <dd>112 970 ₽</dd>
+        </dl>
+        <div class="modal__credit-basket-bt-container">
+            <a href="#" class="button button__border modal-close modal__credit-basket-back modal__credit-basket-bt" data-desk="Вернуться в корзину" data-mob="Назад"></a>
+            <a href="#" class="button modal__credit-basket-send modal__credit-basket-bt">Оформить</a>
+        </div>
+    </div>
+</div>

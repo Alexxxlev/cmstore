@@ -1,0 +1,71 @@
+.catalog-pagin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    &__button {
+        margin: 32px 0;
+        width: 100%;
+        @media (min-width: $phone-big-screen-size) {
+            width: auto;
+            margin: 42px 0;
+        }
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 42px;
+        @media (max-width: $phone-big-screen-size - 1px) {
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+    }
+    &__arrow {
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+        &_prev {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+        &_disabled {
+            pointer-events: none;
+            color: #D7D7D7;
+        }
+    }
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 48px;
+        border-radius: 8px;
+        @media (max-width: $tablet-screen-size - 1px) {
+            height: 42px;
+        }
+        @media (max-width: $phone-big-screen-size - 1px) {
+            width: 32px;
+            height: 32px;
+        }
+        &_current {
+            background: $black;
+            color: #fff;
+            pointer-events: none;
+        }
+        &:hover {
+            color: $black;
+            background: #EBEBED;
+        }
+    }
+    &__dotted {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 23px;
+        height: 23px;
+        background: url(../img/icon/dotted.svg) no-repeat 50% 50%;
+    }
+}

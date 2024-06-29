@@ -1,0 +1,71 @@
+.catalog-chips {
+    display: none;
+    width: 100%; 
+    gap: 8px;
+    margin: 16px -16px -7px;
+    overflow: auto; 
+    border-top: .5px solid #E1E1E3;
+    padding: 9px 16px 0;
+    width: calc(100% + 32px);
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+    @media (min-width: $phone-big-screen-size) {
+        padding: 0;
+        border-top: none;
+        width: 100%;
+        margin: 16px 0 0;
+        gap: 16px;
+    }
+    &_active {
+        display: flex;
+    }
+    &__chip-range,
+    &__removeAll,
+    &__chip {
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid $black;
+        border-radius: 6px;
+        padding: 0 8px 0 12px;
+        height: 28px;
+        cursor: pointer;
+        font-size: 12px;
+        gap: 4px;
+        white-space: nowrap;
+        span:not(.text) {
+            display: none;
+        }
+        span.text {
+            display: inline-block;
+        }
+        svg {
+            pointer-events: none;
+            color: #999;
+            width: 24px;
+            height: 24px;
+            transition: color .3s ease;
+        }
+        .checkbox-switcher__bg {
+            display: none;
+        }
+        &:hover {
+            color: $black;
+            svg {
+                color: $black;
+            }
+        }
+    }
+    &__removeAll {
+        border: none;
+        background: #EEEEF0;
+        @media (max-width: $phone-big-screen-size - 1px) {
+            order: -1;
+        }
+    }
+}
